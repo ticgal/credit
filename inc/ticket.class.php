@@ -350,7 +350,7 @@ class PluginCreditTicket extends CommonDBTM {
          $out .= PluginCreditEntity::dropdown(['name'      => 'plugin_credit_entities_id',
                                                'entity'    => $ticket->getEntityID(),
                                                'display'   => false,
-                                               'condition' => ['is_active' => 1],
+                                               'condition' => 'is_active=1',
                                                'rand'      => $rand]);
          $out .= "</td><td colspan='2'></td>";
          $out .= "</tr><tr><td>";
